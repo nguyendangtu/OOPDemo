@@ -24,4 +24,11 @@ class AnimalTest {
         assertEquals(chicken.move(), "");
         assertEquals(chicken.sound(), "Cluck, cluck");
     }
+
+    @Test
+    public void testRooster() {
+        Rooster rooster = new Rooster();
+        assertEquals(rooster.move(), "");
+        assertEquals(rooster.sound(), "Cock-a-doodle-doo");
+    }
 }

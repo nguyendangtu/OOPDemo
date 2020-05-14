@@ -46,3 +46,9 @@ class Chicken extends Bird{
     }
 }
 
+class Rooster extends Chicken{
+    @Override
+    public String sound() {
+        return "Cock-a-doodle-doo";
+    }
+}
