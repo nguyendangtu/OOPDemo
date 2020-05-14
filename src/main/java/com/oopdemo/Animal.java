@@ -98,3 +98,15 @@ class Parrot implements Animal {
         return animal.sound();
     }
 }
+
+class Fish implements Animal {
+    @Override
+    public String move() {
+        return "swim";
+    }
+
+    @Override
+    public String sound() {
+        return "";
+    }
+}
