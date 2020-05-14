@@ -143,3 +143,31 @@ class Dolphins extends SpecialFish {
         return "Dolphins is not a fish but they are good swimmer";
     }
 }
+
+class Butterfly implements Animal {
+    @Override
+    public String move() {
+        return "fly";
+    }
+
+    @Override
+    public String sound() {
+        return "";
+    }
+}
+
+class Caterpillar extends Butterfly implements Animal {
+    private boolean isButterfly;
+
+    @Override
+    public String move() {
+        if (isButterfly) {
+            return super.move();
+        }
+        return "walk";
+    }
+
+    public void convertToButterfly() {
+        isButterfly = true;
+    }
+}

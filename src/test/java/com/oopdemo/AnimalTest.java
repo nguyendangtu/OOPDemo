@@ -63,5 +63,21 @@ class AnimalTest {
         assertEquals(dolphins.label(), "Dolphins is not a fish but they are good swimmer");
     }
 
+    @Test
+    public void testButterfly() {
+        Butterfly butterfly = new Butterfly();
+        assertEquals(butterfly.move(), "fly");
+        assertEquals(butterfly.sound(), "");
+    }
 
+    @Test
+    public void testCaterpillar() {
+        Caterpillar caterpillar = new Caterpillar();
+        assertEquals(caterpillar.move(), "walk");
+        assertEquals(caterpillar.sound(), "");
+
+        //metamorphosis
+        caterpillar.convertToButterfly();
+        assertEquals(caterpillar.move(), "fly");
+    }
 }
