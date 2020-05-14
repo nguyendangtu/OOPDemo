@@ -57,4 +57,11 @@ class AnimalTest {
         assertEquals(clownfish.makeJoke(), "make joke");
     }
 
+    @Test
+    public void testDolphins() {
+        Dolphins dolphins = new Dolphins();
+        assertEquals(dolphins.label(), "Dolphins is not a fish but they are good swimmer");
+    }
+
+
 }

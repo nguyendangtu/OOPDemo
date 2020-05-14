@@ -136,3 +136,10 @@ class Clownfish extends SpecialFish {
         return "make joke";
     }
 }
+
+class Dolphins extends SpecialFish {
+    @Override
+    public String label() {
+        return "Dolphins is not a fish but they are good swimmer";
+    }
+}
