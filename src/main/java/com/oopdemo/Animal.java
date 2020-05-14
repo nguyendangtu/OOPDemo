@@ -7,10 +7,11 @@ package com.oopdemo;
  */
 public interface Animal {
     String move();
+
     String sound();
 }
 
-class Bird implements Animal{
+class Bird implements Animal {
     @Override
     public String move() {
         return "fly";
@@ -22,7 +23,7 @@ class Bird implements Animal{
     }
 }
 
-class Duck extends Bird{
+class Duck extends Bird {
     @Override
     public String move() {
         return "swim";
@@ -34,7 +35,7 @@ class Duck extends Bird{
     }
 }
 
-class Chicken extends Bird{
+class Chicken extends Bird {
     @Override
     public String move() {
         return "";
@@ -46,9 +47,54 @@ class Chicken extends Bird{
     }
 }
 
-class Rooster extends Chicken{
+class Rooster extends Chicken {
     @Override
     public String sound() {
         return "Cock-a-doodle-doo";
+    }
+}
+
+class Dogs implements Animal {
+    @Override
+    public String move() {
+        return "walk";
+    }
+
+    @Override
+    public String sound() {
+        return "Woof, woof";
+    }
+}
+
+class Cats implements Animal {
+    @Override
+    public String move() {
+        return "walk";
+    }
+
+    @Override
+    public String sound() {
+        return "Meow";
+    }
+}
+
+class Parrot implements Animal {
+    private Animal animal;
+
+    private Parrot() {
+    }
+
+    public Parrot(Animal animal) {
+        this.animal = animal;
+    }
+
+    @Override
+    public String move() {
+        return animal.move();
+    }
+
+    @Override
+    public String sound() {
+        return animal.sound();
     }
 }

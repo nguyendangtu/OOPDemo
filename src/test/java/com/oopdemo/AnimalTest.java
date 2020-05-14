@@ -31,4 +31,15 @@ class AnimalTest {
         assertEquals(rooster.move(), "");
         assertEquals(rooster.sound(), "Cock-a-doodle-doo");
     }
+
+    @Test
+    public void testParrot() {
+        Parrot parrotDogs = new Parrot(new Dogs());
+        assertEquals(parrotDogs.move(), "walk");
+        assertEquals(parrotDogs.sound(), "Woof, woof");
+
+        Parrot parrotCats = new Parrot(new Cats());
+        assertEquals(parrotCats.move(), "walk");
+        assertEquals(parrotCats.sound(), "Meow");
+    }
 }
