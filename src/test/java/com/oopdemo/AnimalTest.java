@@ -81,5 +81,10 @@ class AnimalTest {
         assertEquals(caterpillar.move(), "fly");
     }
 
-
+    @Test
+    public void testRoosterWithLanguage() {
+        Rooster rooster = new Rooster();
+        rooster.setLanguage("Russian");
+        assertEquals(rooster.sound(), "kukareku");
+    }
 }
