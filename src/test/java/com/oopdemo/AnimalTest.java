@@ -42,4 +42,19 @@ class AnimalTest {
         assertEquals(parrotCats.move(), "walk");
         assertEquals(parrotCats.sound(), "Meow");
     }
+
+    @Test
+    public void testShark() {
+        Shark shark = new Shark();
+        assertEquals(shark.label(), "Sharks are large and grey");
+        assertEquals(shark.eat(), "Sharks eat other fish");
+    }
+
+    @Test
+    public void testClownfish() {
+        Clownfish clownfish = new Clownfish();
+        assertEquals(clownfish.label(), "Clownfish are small and colourful (orange)");
+        assertEquals(clownfish.makeJoke(), "make joke");
+    }
+
 }

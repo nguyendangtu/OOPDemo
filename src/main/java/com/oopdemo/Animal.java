@@ -110,3 +110,29 @@ class Fish implements Animal {
         return "";
     }
 }
+
+abstract class SpecialFish extends Fish {
+    abstract String label();
+}
+
+class Shark extends SpecialFish {
+    @Override
+    public String label() {
+        return "Sharks are large and grey";
+    }
+
+    public String eat() {
+        return "Sharks eat other fish";
+    }
+}
+
+class Clownfish extends SpecialFish {
+    @Override
+    public String label() {
+        return "Clownfish are small and colourful (orange)";
+    }
+
+    public String makeJoke() {
+        return "make joke";
+    }
+}
